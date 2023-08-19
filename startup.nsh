@@ -40,7 +40,7 @@ if exist "%root%\disable_bios" then
     echo "*****************************************"
     echo " "
 
-    sas2flash.efi -o -f 2118it.bin
+    sas2flash.efi -o -f 9207-4i4e.bin
 else
     # Flash firmware + BIOS, allowing booting from an HBA-attached disk
     echo "**************************************"
@@ -48,7 +48,7 @@ else
     echo "**************************************"
     echo " "
 
-    sas2flash.efi -o -f 2118it.bin -b mptsas2.rom
+    sas2flash.efi -o -f 9207-4i4e.bin -b mptsas2.rom
 endif
 
 # Exit on error

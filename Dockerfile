@@ -19,8 +19,8 @@ RUN curl 'https://docs.broadcom.com/docs-and-downloads/host-bus-adapters/host-bu
 RUN unzip -j -d "$ROOT_DIR" installer.zip Installer_P20_for_UEFI/sas2flash_efi_ebc_rel/sas2flash.efi
 
 # Download & extract firmware
-RUN curl 'https://docs.broadcom.com/docs-and-downloads/host-bus-adapters/host-bus-adapters-common-files/sas_sata_6g_p20/9211-8i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows.zip' --output 'firmware.zip'
-RUN unzip -j -d "$ROOT_DIR" firmware.zip 9211-8i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows/Firmware/HBA_9211_8i_IT/2118it.bin 9211-8i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows/sasbios_rel/mptsas2.rom
+RUN curl 'https://docs.broadcom.com/docs-and-downloads/host-bus-adapters/host-bus-adapters-common-files/sas_sata_6g_p20/9207_4i4e_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows.zip' --output 'firmware.zip'
+RUN unzip -j -d "$ROOT_DIR" firmware.zip 9207_4i4e_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows/Firmware/HBA_9207_4i4e_IT/9207-4i4e.bin 9207_4i4e_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows/sasbios_rel/mptsas2.rom
 ARG DISABLE_BIOS
 RUN if [ -n "$DISABLE_BIOS" ]; then touch "$ROOT_DIR/disable_bios"; fi
 
